@@ -10,7 +10,7 @@
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- カスタムCSS -->
-  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="/Users/matsumurashougo/geekationWorkspace/coding_advanced/css/base.css">
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
@@ -18,40 +18,39 @@
 <body>
   <header>
     <!-- ヘッダー -->
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-body-secondary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="color: black;">
-            <h1>Casteria</h1>
-          </a>
-          <button class="navbar-toggler active" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+    <nav class="navbar navbar-expand-lg navbar-dark bg-body-secondary" style="padding: 0 50px;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color: black;">
+          <h1>Casteria</h1>
+        </a>
+        <button class="navbar-toggler active" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
           aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon" style="color: orange;"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" style="color: black;">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" style="color: black;">Food</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" style="color: black;">Drink</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" style="color: black;">お問い合わせ</a>
-              </li>
-            </ul>
-            <form role="search" class="d-flex">
-              <input type="search" class="form-control me-2" placeholder="search..." aria-label="Search">
-              <button class="btn btn-outline-success" type="submit" style="color: black;">search</button>
-            </form>
-          </div>
+          <span class="navbar-toggler-icon" style="color: orange;"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" style="color: black;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: black;">Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: black;">Drink</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: black;">お問い合わせ</a>
+            </li>
+          </ul>
+          <form role="search" class="d-flex">
+            <input type="search" id="searchInput" class="form-control me-2" placeholder="search..." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" style="color: black;">search</button>
+          </form>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
+
 
   <!-- Swiper スライドショー -->
   <div class="page-content">
@@ -74,36 +73,6 @@
       <div class="swiper-scrollbar"></div>
     </div>
   </div>
-
-  <script>
-    var swiper = new Swiper('.mySwiper', {
-      slidesPerView: 1,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-        },
-      },
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        hide: false,
-        draggable: true,
-        snapOnRelease: true
-      }
-    });
-  </script>
   <!-- コロナ情報 -->
   <div class="covid">
     <h2>新型コロナウイルスに対する取り組みの最新情報をご案内</h2>
@@ -113,12 +82,12 @@
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-          data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
           ■衛生面に関して
         </button>
       </h2>
-      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-        <div class="accordion-body">
+      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+        <div class="accordion-body accordion-content">
           <li>・マスクを着用しての接客</li>
           <li>・出勤前の検温の確認</li>
           <li>・レジカウンターやドリンク受け渡し口等への飛沫防止ガードの設置</li>
@@ -136,7 +105,7 @@
         </button>
       </h2>
       <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-        <div class="accordion-body">
+        <div class="accordion-body accordion-content">
           <li>・店内では、飲食時以外のマスク着用をお願いいたします</li>
           <li>・入店時の手指の消毒にご協力ください</li>
           <li>・レジに並ぶ際、目安を示すフロアステッカーに沿った列間隔の確保にご協力ください</li>
@@ -154,7 +123,7 @@
         </button>
       </h2>
       <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-        <div class="accordion-body">
+        <div class="accordion-body accordion-content">
           <li>・直接接触しません商品の提供、金銭授受にトレーの活用</li>
           <li>・ドリンクやフードのサンプリング中止</li>
           <li>・地域活動・イベントの中止</li>
@@ -165,6 +134,7 @@
       </div>
     </div>
   </div>
+
 
   <!-- インフォメーション -->
   <div class="container fade-in">
@@ -212,33 +182,33 @@
     <div class="store-list-section">
       <h2 class="store-list-title">店舗一覧</h2>
       <div class="gallery">
-          <div class="gallery-item">
-            <img src="/Users/matsumurashougo/geekationWorkspace/coding_advanced/img/restaurant2.jpg" alt="東京都渋谷区の店舗">
-            <i class="fas fa-map-marker-alt"></i>
-            <a href="https://www.google.com/maps/search/?api=1&query=東京都渋谷区 xxxxxx xxxxx" target="_blank">東京都渋谷区 xxxxxx
-              xxxxx</a>
-          </div>
-          <div class="gallery-item">
-            <img src="/Users/matsumurashougo/geekationWorkspace/coding_advanced/img/restaurant3.jpg" alt="千葉県松戸市の店舗">
-            <i class="fas fa-map-marker-alt"></i>
-            <a href="https://www.google.com/maps/search/?api=1&query=千葉県松戸市 xxxxxx xxxxx" target="_blank">千葉県松戸市 xxxxxx
-              xxxxx</a>
-          </div>
-          <div class="gallery-item">
-            <img src="/Users/matsumurashougo/geekationWorkspace/coding_advanced/img/restaurant4.jpg" alt="神奈川県横浜市の店舗">
-            <i class="fas fa-map-marker-alt"></i>
-            <a href="https://www.google.com/maps/search/?api=1&query=神奈川県横浜市 xxxxxx xxxxx" target="_blank">神奈川県横浜市
-              xxxxxx xxxxx</a>
-          </div>
-          <div class="gallery-item">
-            <img src="/Users/matsumurashougo/geekationWorkspace/coding_advanced/img/restaurant5.jpg" alt="埼玉県川越市の店舗">
-            <i class="fas fa-map-marker-alt"></i>
-            <a href="https://www.google.com/maps/search/?api=1&query=埼玉県川越市 xxxxxx xxxxx" target="_blank">埼玉県川越市 xxxxxx
-              xxxxx</a>
-          </div>
+        <div class="gallery-item">
+          <img src="/Users/matsumurashougo/geekationWorkspace/coding_advanced/img/restaurant2.jpg" alt="東京都渋谷区の店舗">
+          <i class="fas fa-map-marker-alt"></i>
+          <a href="https://www.google.com/maps/search/?api=1&query=東京都渋谷区 xxxxxx xxxxx" target="_blank">東京都渋谷区 xxxxxx
+            xxxxx</a>
+        </div>
+        <div class="gallery-item">
+          <img src="/Users/matsumurashougo/geekationWorkspace/coding_advanced/img/restaurant3.jpg" alt="千葉県松戸市の店舗">
+          <i class="fas fa-map-marker-alt"></i>
+          <a href="https://www.google.com/maps/search/?api=1&query=千葉県松戸市 xxxxxx xxxxx" target="_blank">千葉県松戸市 xxxxxx
+            xxxxx</a>
+        </div>
+        <div class="gallery-item">
+          <img src="/Users/matsumurashougo/geekationWorkspace/coding_advanced/img/restaurant4.jpg" alt="神奈川県横浜市の店舗">
+          <i class="fas fa-map-marker-alt"></i>
+          <a href="https://www.google.com/maps/search/?api=1&query=神奈川県横浜市 xxxxxx xxxxx" target="_blank">神奈川県横浜市
+            xxxxxx xxxxx</a>
+        </div>
+        <div class="gallery-item">
+          <img src="/Users/matsumurashougo/geekationWorkspace/coding_advanced/img/restaurant5.jpg" alt="埼玉県川越市の店舗">
+          <i class="fas fa-map-marker-alt"></i>
+          <a href="https://www.google.com/maps/search/?api=1&query=埼玉県川越市 xxxxxx xxxxx" target="_blank">埼玉県川越市 xxxxxx
+            xxxxx</a>
         </div>
       </div>
     </div>
+  </div>
   </div>
   <!--最下部-->
   <footer>
@@ -249,50 +219,14 @@
       <div class="footer-dot"></div>
     </div>
   </footer>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, {
-      threshold: 0.
-    });
 
-    const fadeInElements = document.querySelectorAll('.fade-in');
-    fadeInElements.forEach(element => {
-      observer.observe(element);
-    });
-  </script>
-  <script>
-    const accordionItems = document.querySelectorAll('.accordion-item');
-    accordionItems.forEach(item => {
-      const header = item.querySelector('.accordion-header');
-      const content = item.querySelector('.accordion-content');
-      header.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
-        const activeItem = document.querySelector('.accordion-item.active');
-        if (activeItem && activeItem !== item) {
-          const activeItemContent = activeItem.querySelector('.accordion-content');
-          activeItem.classList.remove('active');
-          activeItemContent.style.maxHeight = 0;
-        }
-        if (!isActive) {
-          item.classList.add('active');
-          content.style.maxHeight = content.scrollHeight + "px";
-        } else {
-          item.classList.remove('active');
-          content.style.maxHeight = 0;
-        }
-      });
-    });
   </script>
   <!-- Bootstrap JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Swiper JavaScript -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- カスタムJavaScript -->
+  <script src="/Users/matsumurashougo/geekationWorkspace/coding_advanced/script.js"></script>
 </body>
+
 </html>

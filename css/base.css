@@ -69,17 +69,6 @@ body {
   background-color: #FFEFD5;
 }
 
-
-
-.header-container {
-  background-color: lightgray;
-  color: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
 /* ナビゲーションバーのリンクにカーソルが重なると指マークに変わる */
 .nav-link:hover {
   cursor: pointer;
@@ -91,28 +80,8 @@ body {
   display: flex;
   justify-content: flex-end;
   margin: 0;
-  padding: 0;
+  padding: 0;　
 }
-
-search-bar {
-  display: flex;
-  align-items: center;
-}
-
-.search-bar input {
-  padding: 5px;
-  margin-right: 5px;
-}
-
-.search-bar button {
-  padding: 5px;
-  background-color: white;
-  color: #333;
-  border: none;
-  cursor: pointer;
-  margin-left: 5px;
-}
-
 
 .swiper-slide img {
   width: 100%;
@@ -150,7 +119,7 @@ search-bar {
   overflow: hidden;
 }
 
-/* ボタンのカラーを設定 */
+/* アコーディオン　ボタンのカラーを設定 */
 .accordion-button {
   background-color: #FFC7AF;
   color: black;
@@ -160,11 +129,6 @@ search-bar {
 /* ボタンを押した後に表示される内容の背景色を設定 */
 .accordion-body {
   background-color: #FFEFD5;
-}
-
-.header-container {
-  justify-content: space-between;
-  padding-right: 10px;
 }
 
 .navigation-container {
@@ -179,32 +143,10 @@ search-bar {
   padding: 5px;
 }
 
-.hamburger-menu {
-  display: none;
-  cursor: pointer;
-  font-size: 26px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
-.hamburger-menu.active {
-  color: orange;
-  border-color: orange;
-}
-
 /* 768xp以下の時ハンバーガーメニュー*/
 @media (max-width: 768px) {
   .header-container {
     position: relative;
-  }
-
-  .hamburger-menu {
-    display: block;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    z-index: 5;
   }
 
   .navigation {

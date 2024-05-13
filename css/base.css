@@ -1,0 +1,513 @@
+@charset "UTF-8";
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  text-align: left;
+  list-style-type: none;
+  border-collapse: collapse;
+}
+
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+img {
+  border-style: none;
+  display: block;
+}
+
+hr {
+  display: none;
+}
+
+em {
+  font-style: normal
+}
+
+input {
+  line-height: auto;
+  vertical-align: middle;
+}
+
+strong.more {
+  color: #c30
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+  background-color: #FFEFD5;
+}
+
+
+
+.header-container {
+  background-color: lightgray;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* ナビゲーションバーのリンクにカーソルが重なると指マークに変わる */
+.nav-link:hover {
+  cursor: pointer;
+}
+
+/* ヘッダーメニュー */
+.nav-item ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.search-bar button {
+  padding: 5px;
+  background-color: white;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+
+.swiper-slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.covid {
+  text-align: center;
+  margin: 0px 0;
+}
+
+.covid h2 {
+  font-size: 2.8em;
+  color: black;
+  padding: 0px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 0px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.accordion-item {
+  width: 100%;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+/* ボタンのカラーを設定 */
+.accordion-button {
+  background-color: #FFC7AF;
+  color: black;
+  /* ボタンのテキストカラーを黒に設定 */
+}
+
+/* ボタンを押した後に表示される内容の背景色を設定 */
+.accordion-body {
+  background-color: #FFEFD5;
+}
+
+.header-container {
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* ナビゲーションを右端に配置 */
+  width: auto;
+  /* 横幅を必要最小限に */
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 26px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.hamburger-menu.active {
+  color: orange;
+  border-color: orange;
+}
+
+/* 768xp以下の時ハンバーガーメニュー*/
+@media (max-width: 768px) {
+  .header-container {
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 5;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    background-color: lightgray;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .navigation ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navigation ul li {
+    text-align: left;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .show .hamburger-menu {
+    max-height: 1000px;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  .navigation-container .navigation {
+    display: none;
+    position: left;
+  }
+}
+
+/* アコーディオンより下*/
+.container {
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.container .content img {
+  margin-left: 10%;
+}
+
+.container h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-left: 10%;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.content img {
+  width: 400px;
+  height: auto;
+  float: left;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .content img {
+    width: 90%;
+    margin-bottom: 10px;
+    margin-right: 10%;
+    width: 80%;
+  }
+}
+
+.content p {
+  flex-grow: 1;
+  margin-right: 10%;
+}
+
+@media (max-width: 768px) {
+  .content p {
+    flex-grow: 1;
+    margin-left: 10%;
+  }
+}
+
+.info-section {
+  display: flex;
+  background-color: black;
+  color: #fff;
+  padding: 20px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.info-content {
+  flex-basis: 50%;
+  padding-right: 2%;
+}
+
+.info-image {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.info-image img {
+  width: 70%;
+  height: auto;
+}
+
+
+.info-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.info-section p {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+@media (max-width: 768px) {
+
+
+  .info-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-content,
+  .info-image {
+    flex-basis: 100%;
+  }
+
+  .info-content {
+    order: 1;
+  }
+
+  .info-image {
+    order: 2;
+  }
+
+  .info-image img {
+    width: 100%;
+  }
+
+  .info-section h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+
+  .info-section p {
+    font-size: 1em;
+  }
+}
+
+.store-list-section {
+  text-align: center;
+  padding: 20px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.store-list-title {
+  color: black;
+  margin-bottom: 20px;
+  font-size: 2em;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.gallery-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gallery-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.gallery-item a {
+  color: black;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.gallery-item i.fas {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.gallery-item span {
+  font-size: 0.9em;
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer-container {
+  background-color: darkgray;
+  color: black;
+  padding: 20px 40px; /* 上下の余白を20px、左右の余白を40pxに設定 */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-container a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 5px 10px;
+  white-space: nowrap;
+}
+
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 70px 40px; /* 上下の余白を20px、左右の余白を40pxに設定 */
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .footer-container a {
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .search-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+
+  .swiper-slide {
+    width: 100%;
+  }
+
+  .gallery-item img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .gallery {
+    flex-direction: column;
+  }
+
+  .gallery-item {
+    margin-bottom: 20px;
+  }
+
+  .container {
+    margin-top: 10px;
+  }
+
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -80,7 +80,7 @@ body {
   display: flex;
   justify-content: flex-end;
   margin: 0;
-  padding: 0;　
+  padding: 0;
 }
 
 .swiper-slide img {
@@ -104,6 +104,7 @@ body {
   margin-left: 10%;
   margin-right: 10%;
 }
+
 /* アコーディオンメニュ０*/
 .accordion {
   display: flex;
@@ -112,11 +113,13 @@ body {
   margin-left: 10%;
   margin-right: 10%;
 }
+
 .accordion-item {
   width: 100%;
   margin-bottom: 3px;
   overflow: hidden;
 }
+
 .accordion-header {
   display: flex;
   align-items: center;
@@ -126,6 +129,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .accordion-content {
   background-color: #FFEFD5;
   overflow: hidden;
@@ -137,6 +141,7 @@ body {
   max-height: 1000px;
   transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
+
 .accordion-item.active .accordion-header {
   background-color: #FFC7AF;
 }
@@ -271,7 +276,6 @@ body {
   height: auto;
 }
 
-
 .info-section h2 {
   font-size: 2em;
   margin-bottom: 10px;
@@ -283,8 +287,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
-
   .info-section {
     flex-direction: column;
     text-align: center;
@@ -380,7 +382,8 @@ section::after {
 .footer-container {
   background-color: darkgray;
   color: black;
-  padding: 20px 40px; /* 上下の余白を20px、左右の余白を40pxに設定 */
+  padding: 20px 40px;
+  /* 上下の余白を20px、左右の余白を40pxに設定 */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -395,10 +398,10 @@ section::after {
   white-space: nowrap;
 }
 
-
 @media (max-width: 768px) {
   .footer-container {
-    padding: 70px 40px; /* 上下の余白を20px、左右の余白を40pxに設定 */
+    padding: 70px 40px;
+    /* 上下の余白を20px、左右の余白を40pxに設定 */
     justify-content: space-between;
     flex-wrap: nowrap;
   }
@@ -439,7 +442,6 @@ section::after {
   }
 
 }
-
 
 @keyframes fadeIn {
   from {

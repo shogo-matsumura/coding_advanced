@@ -104,7 +104,7 @@ body {
   margin-left: 10%;
   margin-right: 10%;
 }
-
+/* アコーディオンメニュ０*/
 .accordion {
   display: flex;
   flex-direction: column;
@@ -112,23 +112,33 @@ body {
   margin-left: 10%;
   margin-right: 10%;
 }
-
 .accordion-item {
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   overflow: hidden;
 }
-
-/* アコーディオン　ボタンのカラーを設定 */
-.accordion-button {
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
   background-color: #FFC7AF;
-  color: black;
-  /* ボタンのテキストカラーを黒に設定 */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.accordion-content {
+  background-color: #FFEFD5;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-/* ボタンを押した後に表示される内容の背景色を設定 */
-.accordion-body {
-  background-color: #FFEFD5;
+.accordion-item.active .accordion-content {
+  max-height: 1000px;
+  transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.accordion-item.active .accordion-header {
+  background-color: #FFC7AF;
 }
 
 .navigation-container {
@@ -452,4 +462,10 @@ section::after {
 .fade-in.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .store-list-section {
+    display: none;
+  }
 }
